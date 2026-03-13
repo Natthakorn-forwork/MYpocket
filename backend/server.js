@@ -3,12 +3,12 @@ const cors = require('cors')
 const app = express();
 const port = process.env.PORT || 3000
 
-const AuthRoutes = require('./routes/AuthRoutes')
+const MoneyRoutes = require('./routes/MoneyRoutes')
 
 app.use(express.json());
 
 
-app.use('/auth', AuthRoutes)
+app.use('/add', MoneyRoutes)
 
 
 app.get('/', (req, res) => (
